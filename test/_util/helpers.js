@@ -118,7 +118,8 @@ export function sortCss(cssText) {
 	return cssText.split(';')
 		.filter(Boolean)
 		.sort((a, b) => a[0]==='-' ? -1 : b[0]==='-' ? 1 : a - b)
-		.join(';') + ';';
+		.join(';')
+		.replace(/(\s*:\s*)/g, ': ') + ';';
 }
 
 /**
