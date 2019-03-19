@@ -1,3 +1,4 @@
+require('object.getownpropertydescriptors').shim();
 import { createElement as h, Component, options } from '../../src';
 import { assign } from '../../src/util';
 import { clearLog, getLog } from './logCall';
