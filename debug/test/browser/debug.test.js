@@ -199,7 +199,7 @@ describe('debug', () => {
 			render(<Foo />, scratch);
 
 			expect(console.error).to.be.calledOnce;
-			expect(errors[0].includes('required')).to.equal(true);
+			expect(errors[0].indexOf('required') > -1).to.equal(true);
 		});
 
 		it('should not print to console when types are correct', () => {
